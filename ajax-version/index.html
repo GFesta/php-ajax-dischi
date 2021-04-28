@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Milestone 2: Attraverso l’utilizzo di AXIOS: 
+al caricamento della pagina AXIOS chiederà 
+attraverso una chiamata i dischi a php e li stamperà attraverso VUEJS. -->
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+        <title>DISCHI with AJAX</title>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <div class="container">
+                    <img src="img/Spotify_logo.png" alt="logo" />
+                        <div class="filter">
+                            <select id="genre-filter">
+                                <option value="">Generi musicali</option>
+                            </select>
+                        </div>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="card-container">
+                        <div class="cd" v-for="disco in dischi" >
+                        <img :src="disco.poster" :alt="disco.title">
+                        <h4>{{ disco.title }}</h4>
+                        <span class="author">{{ disco.author }}</span>
+                        <span class="year">{{ disco.year }}</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>

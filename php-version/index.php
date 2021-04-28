@@ -4,24 +4,26 @@
 //che stampa direttamente i dischi in pagina: 
 //al caricamento della pagina ci saranno tutti i dischi.
 
-include 'database.php' ?>
+include __DIR__ . '/partials/database.php' ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="master.css?v=<?php echo time(); ?>">
+
+        <link rel="stylesheet" href="../css/style.css">
         <title>DISCHI with PHP</title>
     </head>
     <body>
-    <header>
-        <div class="container">
-            <img src="img/Spotify_logo.png" alt="logo" />
-                <div class="filter">
-                    <select id="genre-filter">
-                        <option value="">Generi musicali</option>
-                    </select>
-                </div>
+        <header>
+            <div class="container">
+                <img src="../img/Spotify_logo.png" alt="logo" />
+                    <div class="filter">
+                        <select id="genre-filter">
+                            <option value="">Generi musicali</option>
+                        </select>
+                    </div>
             </div>
         </header>
         <main>
